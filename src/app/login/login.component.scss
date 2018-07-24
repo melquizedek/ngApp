@@ -1,0 +1,23 @@
+.login-con {
+    margin-top: 10%;
+}
+.example-card {
+    position: relative;
+    min-width: 20%;
+    .button-con {
+        text-align: center;
+    }
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+//   mat-grid-tile {
+//     background: lightblue;
+//   }
