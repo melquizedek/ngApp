@@ -1,0 +1,7 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="name" [(ngModel)]="hero.name">
+  </mat-form-field>
+</div>

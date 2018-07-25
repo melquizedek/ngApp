@@ -1,2 +1,2 @@
-<app-mat-nav *ngIf="authenticated"></app-mat-nav>
-<app-login *ngIf="!authenticated"></app-login>
+<app-mat-nav *ngIf="authenticated" [title]="title"></app-mat-nav>
+<app-login *ngIf="!authenticated" (doLogin)="isLoginSuccess($event)"></app-login>

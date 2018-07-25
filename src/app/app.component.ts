@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app'
-  authenticated: boolean = false
+  title = 'Tour of Heroes'
+  authenticated: boolean = true
+
+  isLoginSuccess(val) : void {
+    this.authenticated = val
+    console.log('authenticated ', this.authenticated)
+  }
+
 }

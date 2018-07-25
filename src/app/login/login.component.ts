@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  isAuthorized: boolean = false
+  @Output() doLogin: EventEmitter<boolean> = new EventEmitter()
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  login(isAuth: boolean) : void {
+    this.doLogin.emit(isAuth)
   }
 
 }

@@ -9,8 +9,13 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { FormsModule } from '@angular/forms';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 const appRoutes: Routes = [
+  { path: '', component: HeroesComponent},
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: MyDashboardComponent}
 ];
@@ -20,7 +25,10 @@ const appRoutes: Routes = [
     AppComponent,
     MatNavComponent,
     MyDashboardComponent,
-    LoginComponent
+    LoginComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +38,7 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true }
     ),
+    FormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
